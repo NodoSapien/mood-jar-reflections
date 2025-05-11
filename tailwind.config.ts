@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Colores para las emociones
+				emotion: {
+					happy: '#4ade80', // verde
+					calm: '#60a5fa', // azul
+					anxious: '#fcd34d', // amarillo
+					angry: '#f87171', // rojo
+					sad: '#a78bfa', // morado
+					excited: '#fb923c', // naranja
 				}
 			},
 			borderRadius: {
@@ -84,12 +94,32 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'bounce-in': {
+					'0%': { 
+						transform: 'translateY(-500px)',
+						opacity: '0',
+					},
+					'60%': { 
+						transform: 'translateY(30px)',
+						opacity: '1',
+					},
+					'80%': { 
+						transform: 'translateY(-10px)',
+					},
+					'100%': { 
+						transform: 'translateY(0)',
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'bounce-in': 'bounce-in 1s ease-out'
+			},
+			fontFamily: {
+				poppins: ['Poppins', 'sans-serif'],
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
